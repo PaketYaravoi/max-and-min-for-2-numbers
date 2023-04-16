@@ -7,41 +7,39 @@ Console.WriteLine("Hello, World!");
 1) приглошение ко вводу
 2) ввод переменных
 3) помещение чисел в строки 
-4) условие, сравнение
-5) вывод ответа
+4) объявление переменных для хранения max и min
+5) условие, сравнение
+6) вывод ответа
 */
 
 
 Console.Clear();
 
-Console.WriteLine("Введите 3 числа и я скажу, какое из них больше");
+Console.WriteLine("Введите 2 числа, а я скажу какое из них больше а какое меньше");
 
-Console.WriteLine("Введите первое число:");
+Console.Write("Введите первое число: ");
 
 string input = Console.ReadLine();  
 int number1 = int.Parse(input);
-Console.Clear();
+
 Console.WriteLine($"Число: {number1}");
 
 
-Console.WriteLine("Введите второе число:");
+Console.Write("Введите второе число: ");
 string input2 = Console.ReadLine();  
 int number2 = int.Parse(input2);
 Console.WriteLine($"Число: {number2}");
 
-Console.WriteLine("Введите третье число:");
-string input3 = Console.ReadLine();  
-int number3 = int.Parse(input3);
-Console.WriteLine($"Число: {number3}");
 
 int max = number1;
+int min = number2;
 
 if(max < number2)
 {
     max = number2;
+    min = number1;
 }
-if(max < number3)
-{
-    max = number3;
-}
-Console.WriteLine($"Наибольшее число: {max}");
+Console.Write("Ответ: ");
+Console.Write($"max = {max}; ");
+Console.WriteLine($"min = {min}.");
+
